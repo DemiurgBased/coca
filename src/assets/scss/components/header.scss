@@ -2,7 +2,7 @@
   padding: 26px 0px 22px;
 
   @include mobile {
-    padding: 22px 0px 18px
+    padding: 22px 0px 18px;
   }
 
   &__container {
@@ -10,24 +10,22 @@
   }
 
   &__logo {
-    
     position: relative;
     z-index: var(--z-index-4);
-    
+
     & svg {
-      
       @include mobile {
         width: 130px;
       }
 
       & path {
         &:not(:last-child) {
-          fill: var(--logo-color-text)
+          fill: var(--logo-color-text);
         }
       }
 
       & circle {
-        fill: var(--logo-color-circle)
+        fill: var(--logo-color-circle);
       }
     }
   }
@@ -35,33 +33,31 @@
   &__right {
     @include flex-align-center;
     gap: 111px;
-    
 
     @include tablet {
       gap: 60px;
     }
 
-      @include small-tablet {
-        position: fixed;
-        top: 0;
-        left: -99vw;
-        z-index: var(--z-index-3);
-        flex-direction: column;
-        justify-content: center;
-        width: 80dvw;
-        height: 100dvh;
-        background-color: var(--neutral-color-10);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
+    @include small-tablet {
+      position: fixed;
+      top: 0;
+      left: -99vw;
+      z-index: var(--z-index-3);
+      flex-direction: column;
+      justify-content: center;
+      width: 80dvw;
+      height: 100dvh;
+      background-color: var(--neutral-color-10);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
 
-        &--visible {
-          left: 0;
-          opacity: 1;
-          visibility: visible;
-        }
-  }
-
+      &--visible {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__switcher {
@@ -104,7 +100,6 @@
         font-size: 20px;
         top: -28px;
       }
-
     }
 
     &-checkbox {
@@ -122,10 +117,7 @@
   }
 }
 
-
 .nav {
-
-
   &__list {
     @include flex-align-center;
     gap: 32px;
@@ -138,7 +130,6 @@
     @include mobile {
       gap: 10px;
     }
-    
   }
 
   &__link {
@@ -153,7 +144,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       right: 0;
       bottom: -5px;
@@ -162,7 +153,9 @@
       background-color: var(--neutral-color-100);
       opacity: 0;
       visibility: hidden;
-      transition: opacity var(--transition), visibility var(--transition);
+      transition:
+        opacity var(--transition),
+        visibility var(--transition);
     }
     &:hover {
       &::after {
@@ -173,7 +166,6 @@
   }
 }
 
-
 .overlay {
   @include small-tablet {
     position: fixed;
@@ -183,19 +175,14 @@
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    
+
     &--visible {
       opacity: 1;
-      visibility: visible
-      }
+      visibility: visible;
     }
   }
-
+}
 
 .burger {
   @include burger;
 }
-
-
-
-
