@@ -166,7 +166,8 @@
   &__right {
     position: relative;
     margin-right: 80px;
-    margin-top: 180px;
+    
+    
 
     @include mini-desktop {
       display: none;
