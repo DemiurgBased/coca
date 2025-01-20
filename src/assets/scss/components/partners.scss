@@ -1,0 +1,106 @@
+.partners {
+    padding: 86px 0;
+
+    @include small-tablet {
+        padding: 10px 0;
+    }
+
+    &__container {
+        @include flex-all-between;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 178%;
+        color: var(--neutral-color-150);
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        @include small-mobile {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        &-num {
+            display: block;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+            margin-bottom: 16px;
+
+            @include small-tablet {
+                text-align: center;
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+
+        @include small-tablet {
+            justify-content: center;
+        }
+
+        @include small-mobile {
+            gap: 10px 10px;
+        }
+    }
+
+    &__item {
+        @include flex-all-center;
+        border-radius: 16px;
+        width: 160px;
+        height: 90px;
+        background-color: #fff;
+
+        @include tablet {
+            width: 120px;
+            height: 70px;
+        }
+
+        @include small-tablet {
+            width: 130px;
+        }
+
+        @include mobile {
+            width: 90px;
+            height: 50px;
+        }
+        @include small-mobile {
+            width: 80px;
+            height: 50px;
+        }
+
+        
+
+        &-img {
+            width: 65%;
+
+            @include mobile {
+                width: 72%;
+            }
+            @include small-mobile {
+                width: 75%;
+            }
+        }
+    }
+    
+
+}
