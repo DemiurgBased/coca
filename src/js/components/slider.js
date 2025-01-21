@@ -7,6 +7,7 @@ export const useInsightSlider = () => {
             slidesPerView: "auto",
             spaceBetween: 32,
             loop: true,
+            centeredSlides: true,
         }
     );
 };
