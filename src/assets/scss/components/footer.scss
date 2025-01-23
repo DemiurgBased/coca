@@ -1,0 +1,140 @@
+.footer {
+    background-color: #1d1e25;
+    color: #fff;
+    padding: 112px 0 0px;
+    max-height: 777px;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 45px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 120%;
+        color: #fff;
+        max-width: 720px;
+        margin-bottom: 24px;
+    }
+
+    &__descr {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 178%;
+        color: #afb3bb;
+        max-width: 543px;
+    }
+
+    &__link {
+        background-color: #ffffff;
+        border-radius: 100px;
+        padding: 16px 32px;
+        width: 177px;
+        height: 56px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #1d1e25;
+        transition: 0.4s;
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 18px;
+        & svg {
+            & path {
+                &:not(:last-child) {
+                    fill: #ffffff;
+                }
+                &:last-child {
+                    fill: #1d1e25;
+                }
+            }
+
+            & circle {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        gap: 144px;
+        padding: 89px 0 56px;
+
+        &-left {
+            max-width: 292px;
+        }
+
+        &-descr {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162%;
+            color: #7e8492;
+        }
+
+        &-right {
+        }
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 93px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        &-subitem {
+        }
+        &-link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #7e8492;
+        }
+
+        &-sublist {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+        }
+    }
+
+    &__bottom {
+        padding: 40px 0 40px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #606060;
+
+        &-lists {
+            display: flex;
+            align-items: center;
+            gap: 72px;
+        }
+        
+        &-socials {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        &-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+}
