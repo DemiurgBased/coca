@@ -1,14 +1,49 @@
+
+
 .footer {
     background-color: #1d1e25;
     color: #fff;
     padding: 112px 0 0px;
     max-height: 777px;
+    @include tablet {
+        padding: 40px 0 0px;
+    }
+
+    &__copyright {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        @include tablet {
+            font-size: 12px;
+        }
+        @include small-tablet {
+            font-size: 12px;
+
+        }
+
+    }
+
 
     &__head {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 45px;
+        @include mobile {
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @include small-mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-text {
+            @include small-tablet {
+                max-width: 460px;
+            }
+        }
+
     }
 
     &__title {
@@ -18,6 +53,19 @@
         color: #fff;
         max-width: 720px;
         margin-bottom: 24px;
+        @include tablet {
+            font-size: 46px;
+        }
+        @include small-tablet {
+            font-size: 36px;
+        }
+        @include mobile {
+            font-size: 36px;
+        }
+        @include small-mobile {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
     }
 
     &__descr {
@@ -26,6 +74,18 @@
         line-height: 178%;
         color: #afb3bb;
         max-width: 543px;
+        @include tablet {
+            font-size: 16px;
+        }
+        @include small-tablet {
+            font-size: 14px;
+        }
+        @include mobile {
+            font-size: 14px;
+        }
+        @include small-mobile {
+            font-size: 12px;
+        }
     }
 
     &__link {
@@ -40,6 +100,27 @@
         text-align: center;
         color: #1d1e25;
         transition: 0.4s;
+        @include small-tablet {
+            font-size: 14px;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include mobile {
+            font-size: 14px;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include small-mobile {
+            font-size: 14px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         &:hover {
             opacity: 0.85;
@@ -48,6 +129,7 @@
 
     &__logo {
         margin-bottom: 18px;
+        transition: 0.5s;
         & svg {
             & path {
                 &:not(:last-child) {
@@ -67,10 +149,38 @@
     &__inner {
         display: flex;
         gap: 144px;
-        padding: 89px 0 56px;
+        padding: 80px 0 56px;
+        align-items: start;
+        @include mini-desktop {
+            padding: 50px 0 66px;
+        }
+        @include tablet {
+            padding: 40px 0 56px;
+        }
+        @include small-tablet {
+            padding: 10px 0 10px;
+            justify-content: center;
+        }
+        @include mobile {
+            padding: 10px 0 10px;
+            justify-content: center;
+        }
 
         &-left {
             max-width: 292px;
+            min-height: 192px;
+            @include mini-desktop {
+                min-height: 240px;
+            }
+            @include tablet {
+                min-height: 210px;
+            }
+            @include small-tablet {
+                display: none;
+            }
+            @include mobile {
+                display: none;
+            }
         }
 
         &-descr {
@@ -78,15 +188,36 @@
             font-size: 16px;
             line-height: 162%;
             color: #7e8492;
+            @include tablet {
+                font-size: 14px;
+            }
         }
 
-        &-right {
+        &-item {
+            cursor: pointer;
+            text-align: center;
+            @include tablet {
+                font-size: 16px;
+            }
         }
 
         &-list {
             display: flex;
             justify-content: space-between;
             gap: 93px;
+            @include mini-desktop {
+                gap: 40px;
+            }
+        
+            @include tablet {
+                gap: 40px;
+            }
+            @include mobile {
+                gap: 10px;
+            }
+            @include small-mobile {
+                gap: 10px;
+            }
         }
 
         &-title {
@@ -95,6 +226,21 @@
             line-height: 150%;
             color: #fff;
             margin-bottom: 24px;
+            @include mini-desktop {
+                min-width: 100px;
+            }
+            
+            @include tablet {
+                min-width: 100px;
+                margin-bottom: 12px;
+            }
+            @include mobile {
+                font-size: 12px;
+            }
+            @include small-mobile {
+                font-size: 12px;
+                min-width: 50px;
+            }
         }
 
         &-subitem {
@@ -104,12 +250,23 @@
             font-size: 16px;
             line-height: 150%;
             color: #7e8492;
+            @include tablet {
+                font-size: 14px;
+            }
+            @include mobile {
+                font-size: 12px;
+            }
         }
 
         &-sublist {
             display: flex;
             gap: 16px;
             flex-direction: column;
+            transition: 0.5s;
+            @include small-mobile {
+                gap: 8px
+                ;
+            }
         }
     }
 
@@ -118,23 +275,47 @@
         display: flex;
         justify-content: space-between;
         border-top: 1px solid #606060;
+        @include mini-desktop {
+            padding: 30px 0 30px;
+        }
+        @include tablet {
+            padding: 20px 0 20px;
+        }
+        @include small-mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
 
         &-lists {
             display: flex;
             align-items: center;
             gap: 72px;
+            @include small-tablet {
+                gap: 35px;
+            }
         }
         
         &-socials {
             display: flex;
             align-items: center;
             gap: 24px;
+            @include small-mobile {
+                margin-bottom: 10px;
+            }
         }
 
         &-links {
             display: flex;
             align-items: center;
             gap: 40px;
+            @include tablet {
+                font-size: 12px;
+            }
+            @include mobile {
+                display: none;
+            }
         }
     }
 }
