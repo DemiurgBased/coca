@@ -25,11 +25,8 @@
     --container-width: 480px;
   }
   --transition: 0.3s;
-  --z-index-1: 1;
-  --z-index-2: 2;
-  --z-index-3: 3;
-  --z-index-4: 4;
   --overview-bg-color: #1d1e25;
+  --card-popular-color: #161A34;
 }
 
 [data-theme='dark'] {
@@ -40,4 +37,5 @@
   --logo-color-circle: #343542;
   --success-color-70: #e2f8f033;
   --overview-bg-color: #18181d;
+  --card-popular-color: #18181D;
 }

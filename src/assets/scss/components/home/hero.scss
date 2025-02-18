@@ -1,5 +1,4 @@
 .hero {
-  position: relative;
   padding: 87px 0 141px;
 
   @include mini-desktop {
@@ -10,56 +9,7 @@
     min-height: calc(100dvh - 109px);
   }
 
-  &::before {
-    top: 50px;
-    left: 181px;
-    width: 551px;
-    height: 551px;
-    background: #fa7515;
-    opacity: 0.2;
-    filter: blur(220px);
-
-    @include mini-desktop {
-      width: 351px;
-      height: 351px;
-      left: 80px;
-    }
-
-    @include small-tablet {
-      width: 251px;
-      height: 251px;
-      top: 20px;
-      left: 40px;
-    }
-  }
-
-  &::after {
-    bottom: -150px;
-    right: 0px;
-    width: 525px;
-    height: 525px;
-    background: var(--success-color-70);
-    filter: blur(180px);
-
-    @include mini-desktop {
-      width: 325px;
-      height: 325px;
-    }
-
-    @include small-tablet {
-      width: 225px;
-      height: 225px;
-    }
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    border-radius: 50%;
-    display: inline-block;
-  }
+  
 
   &__container {
     @include flex-justify-between;

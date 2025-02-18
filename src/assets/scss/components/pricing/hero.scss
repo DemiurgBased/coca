@@ -1,0 +1,319 @@
+.hero {
+    padding: 90px 0 78px;
+    position: relative;
+    &::before {
+        top: 50px;
+        left: 181px;
+        width: 551px;
+        height: 551px;
+        background: #fa7515;
+        opacity: 0.2;
+        filter: blur(220px);
+
+        @include mini-desktop {
+            width: 351px;
+            height: 351px;
+            left: 80px;
+        }
+
+        @include small-tablet {
+            width: 251px;
+            height: 251px;
+            top: 20px;
+            left: 40px;
+        }
+    }
+
+    &::after {
+        bottom: 650px;
+        right: 0px;
+        width: 525px;
+        height: 525px;
+        background: var(--success-color-70);
+        filter: blur(180px);
+
+        @include mini-desktop {
+            width: 325px;
+            height: 325px;
+        }
+
+        @include small-tablet {
+            width: 225px;
+            height: 225px;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    &__head {
+        text-align: center;
+        padding-bottom: 122px;
+    }
+
+    &__title {
+        display: inline-block;
+        padding: 4px 12px;
+        margin-bottom: 24px;
+        font-weight: 600;
+        line-height: 150%;
+        color: #1463ff;
+        background-color: #1463ff1a;
+        border-radius: 16px;
+    }
+
+    &__descr {
+        margin: 0 auto 56px;
+        max-width: 903px;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+
+    &__switcher {
+        position: relative;
+        border-radius: 12px;
+        width: 44px;
+        height: 24px;
+        background-color: var(--neutral-color-130);
+        transition: background-color var(--transition);
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            opacity: 0.6;
+            display: inline-block;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #1463ff;
+            transition: 0.3s;
+        }
+
+        &-wrapper {
+            cursor: pointer;
+            @include flex-all-center;
+            gap: 12px;
+            max-width: 256px;
+            justify-self: center;
+        }
+
+        &-checkbox {
+            cursor: pointer;
+            appearance: none;
+        }
+
+        &:has(&-checkbox:checked) {
+            &::before {
+                opacity: 1;
+                left: 22px;
+            }
+        }
+
+        &-text {
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-150);
+        }
+    }
+
+    &__plans-wrapper {
+        display: flex;
+        width: 1198px;
+        height: 865px;
+        gap: 32px;
+    }
+}
+
+.card {
+    padding: 40px 24px;
+    width: 378px;
+    height: 801px;
+    border: 1px solid #cacaca;
+    border-radius: 16px;
+    margin-top: 64px;
+    transition: 0.5s;
+
+    &__popular {
+        background-color: var(--card-popular-color);
+        height: 789px;
+        margin-top: 0px;
+    }
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__offer {
+        border-radius: 100px;
+        padding: 6px 12px;
+        width: 118px;
+        height: 32px;
+        background: #1463ff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: #f5f5f5;
+        margin-bottom: 16px;
+
+        &-popular {
+            background-color: #1463ff;
+        }
+
+        &-svg {
+            position: absolute;
+            top: 11px;
+            left: 10px;
+
+            &-popular {
+                left: 11px;
+            }
+
+            &-enterprise {
+                left: 8px;
+                top: 9px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 142%;
+        color: var(--neutral-color-100);
+
+        &-popular {
+            color: #fff;
+        }
+    }
+
+    &__descr {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 162%;
+        color: var(--neutral-color-150);
+        margin-bottom: 24px;
+
+        &-popular {
+            font-size: 14px;
+        }
+    }
+
+    &__price {
+        margin-bottom: 24px;
+
+
+        &-num {
+            font-weight: 600;
+            font-size: 56px;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+
+            &-popular {
+                color: #fff;
+            }
+        }
+
+        &-mo {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162%;
+            color: var(--neutral-color-150);
+
+            &-popular {
+                color: #fff;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+
+        
+
+        &-title {
+            margin-bottom: 16px;
+            font-weight: 700;
+            line-height: 150%;
+            color: var(--neutral-color-100);
+
+            &-popular {
+                color: #fff;
+            }
+        }
+        &-item {
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-100);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &-popular {
+                color: #fff;
+            }
+        }
+        &-item s {
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-150);
+        }
+    }
+
+    &__button {
+        border: 1px solid #ced1d8;
+        border-radius: 100px;
+        padding: 16px;
+        width: 160px;
+        height: 56px;
+        font-weight: 600;
+        line-height: 150%;
+        text-align: center;
+        color: var(--neutral-color-100);
+        margin-left: 101px;
+        transition: 0.5s;
+
+        &-popular {
+            background-color: #fff;
+            color: #1d1e25;
+        }
+    }
+}
+
+.card:hover {
+    border: #1463ff 1px solid;
+}
+
+.card__button:hover {
+    background-color: #1463ff;
+    color: #fff;
+    border: #1463ff 1px solid;
+    padding: 17px;
+}
