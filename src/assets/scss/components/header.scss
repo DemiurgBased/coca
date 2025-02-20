@@ -42,7 +42,7 @@
       position: fixed;
       top: 0;
       left: -99vw;
-      z-index: var(--z-index-3);
+      z-index: 3;
       flex-direction: column;
       justify-content: center;
       width: 80dvw;
@@ -170,7 +170,7 @@
   @include small-tablet {
     position: fixed;
     inset: 0;
-    z-index: var(--z-index-2);
+    z-index: -2;
     background-color: #0000003d;
     opacity: 0;
     visibility: hidden;

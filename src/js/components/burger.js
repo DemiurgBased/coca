@@ -7,7 +7,7 @@ export const useBurger = () => {
   const closeBurgerMenu = () => {
     burgerBtn.classList.remove('burger--active');
     burgerMenu.classList.remove('header__right--visible');
-    overlay.classList.remove('overlay--visible');
+    overlay.classList.remove('overlay-visible');
     body.classList.remove('body--fixed');
   };
 
