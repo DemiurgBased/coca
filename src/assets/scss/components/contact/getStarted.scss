@@ -1,0 +1,99 @@
+.getStarted {
+    padding: 120px 0 160px;
+}
+.getStarted__wrapper {
+    position: relative;
+}
+
+.form {
+    border: 2px solid #ced1d8;
+    padding: 56px 48px;
+    width: 608px;
+    height: 784px;
+    background: #fff;
+    border-radius: 30px;
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 122%;
+        letter-spacing: -0.02em;
+        color: #1d1e25;
+        margin-bottom: 20px;
+    }
+    &__descr {
+        margin-bottom: 48px;
+        &-text {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 167%;
+            color: #7e8492;
+        }
+        &-mail {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 167%;
+            color: #7e8492;
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__names {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #fff;
+        border-radius: 100px;
+        padding: 16px 32px;
+        width: 167px;
+        height: 56px;
+        background: #1d1e25;
+        margin-top: 8px;
+    }
+    &__label {
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 143%;
+            color: #1d1e25;
+        }
+
+        &-input {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            color: #7e8492;
+            border: 1px solid #cacaca;
+            border-radius: 8px;
+            padding: 10px 14px;
+            width: 240px;
+            height: 44px;
+        }
+        &-textarea {
+            resize: none;
+            overflow: hidden;
+            width: 512px;
+            height: 134px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.getStarted-img {
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
